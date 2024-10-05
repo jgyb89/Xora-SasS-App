@@ -2,6 +2,7 @@ import { Link as LinkScroll } from "react-scroll"; // Importing the 'Link' compo
 import { useEffect, useState } from "react"; // Importing React hooks 'useEffect' and 'useState'
 import clsx from "clsx"; // Importing 'clsx' for conditional className handling
 
+
 // Header component declaration
 const Header = () => {
   const [hasScrolled, setHasScrolled] = useState(false); // State to track if the user has scrolled down the page
@@ -41,7 +42,7 @@ const Header = () => {
       className={clsx(
         "fixed top-0 left-0 z-50 w-full py-10 transition-all duration-500 max-lg:py-4", // Default styling for the header
         hasScrolled && "py-2 bg-black-100 backdrop-blur-[8px]" // Applies a reduced padding and background if the user has scrolled
-      )}
+      )} // && = is true
     >
       <div className="container flex h-14 items-center max-lg:px-5"> 
         <a className="lg:hidden flex-1 cursor-pointer z-2"> 
